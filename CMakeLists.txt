@@ -32,26 +32,10 @@ else()
     target_link_libraries(${PROJECT_NAME} setupapi)
 endif()
 
-## Uncomment for example
-#add_executable(serial_example examples/serial_example.cc)
-#add_dependencies(serial_example ${PROJECT_NAME})
-#target_link_libraries(serial_example ${PROJECT_NAME})
-
-## Include headers
 include_directories(include)
 
-## Install executable
-install(TARGETS ${PROJECT_NAME}
-    ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-    LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-    RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
-)
+
 
 ## Install headers
 install(FILES include/serial/serial.h include/serial/v8stdint.h
-  DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}/serial)
-
-## Tests
-#if(CATKIN_ENABLE_TESTING)
-#    add_subdirectory(tests)
-#endif()
+  DESTINATION serial)
