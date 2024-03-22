@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
 project(serial LANGUAGES CXX)
 
+
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -60,3 +61,4 @@ target_include_directories(
 set_property(TARGET  ${PROJECT_NAME} PROPERTY PUBLIC_HEADER include/serial/serial.h)
 
 install(TARGETS  ${PROJECT_NAME})
+
